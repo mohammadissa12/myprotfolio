@@ -7,7 +7,7 @@ from myprotfolio.models import About, PersonalInformation, Projects, Skills
 def home_page(request):
     myinfo = PersonalInformation.objects.all()
     myabout = About.objects.all()
-    myskills = Projects.objects.all()
+    myskills = Projects.objects.all().order_by("-id")
     skills = Skills.objects.all()
     context = {
         "info": myinfo,

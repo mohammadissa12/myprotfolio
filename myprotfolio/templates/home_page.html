@@ -10,18 +10,34 @@
     <meta name="keywords" content="Backend Developer, Python, Django, Web Development">
     <title>Mohammad H Issa - Backend Developer</title>
     <link rel="icon" href="{% static 'images/logo-icon1.png' %}">
+<<<<<<< Updated upstream
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+=======
+    <link rel="icon" href="{% static 'images/15.png' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+>>>>>>> Stashed changes
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+<<<<<<< Updated upstream
+=======
+    <link rel="stylesheet" href="{% static 'css/icofont/icofont.min.css' %}">
+    {% comment %} <link rel="preload" href="{% static 'images/fonts/Agustina.21f233e1.woff' %}" as="font" type="font/woff" crossorigin=""> {% endcomment %}
+    <script src="https://use.fontawesome.com/66c3c19309.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.js"></script>
+    <!-- links -->
+>>>>>>> Stashed changes
 </head>
 
 
 <body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
+<<<<<<< Updated upstream
     <button type="button" class="mobile-nav-toggle d-lg-none" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -30,6 +46,12 @@
     
     <header id="header" class="fixed-top">
         <div class="container-fluid navbur">
+=======
+    <!-- <li><i class="uil uil-moon change-theme" id="theme-button"></i></li> -->
+    <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
+    <header id="header" class="fixed-top ">
+        <div class="container-fluid  navbur">
+>>>>>>> Stashed changes
             <div class="navi">
                 <div class="col-xl-9 d-flex align-items-center lefty">
                     <h1 class="logo mr-auto">
@@ -43,6 +65,7 @@
                             <li><a href="#skills">Skills</a></li>
                             <li><a href="#work">My Work</a></li>
                             <li><a href="#contact">Contact</a></li>
+<<<<<<< Updated upstream
                             <li class="theme-toggle-wrapper">
                                 <button type="button" class="theme-toggle" id="theme-button" aria-label="Toggle dark/light theme">
                                     <ion-icon name='contrast-outline'></ion-icon>
@@ -53,9 +76,17 @@
                                     </svg>
                                 </button>
                             </li>
+=======
+                            <div class="invert pl-4 " id="theme-button">
+                                {% comment %} <ion-icon name='contrast-outline' style="color:rgb(17, 190, 221)"></ion-icon> {% endcomment %}
+                                <i name='contrast-outline' class="icofont-ui-brightness change-theme"  id="theme-button"></i>
+                            </div>
+
+>>>>>>> Stashed changes
                         </ul>
                     </nav>
 
+<<<<<<< Updated upstream
                     <button type="button" class="theme-toggle-mobile d-lg-none" id="theme-button-mobile" aria-label="Toggle dark/light theme">
                         <ion-icon name='contrast-outline'></ion-icon>
                         <svg xmlns="http://www.w3.org/2000/svg" class="theme-icon-fallback" viewBox="0 0 512 512" style="display: none;">
@@ -64,10 +95,15 @@
                             <path d="M256 464c-114.88 0-208-93.12-208-208S141.12 48 256 48z" fill="currentColor"></path>
                         </svg>
                     </button>
+=======
+                    {% comment %} <div class="changed mx-3"><i class="icofont-ui-brightness change-theme" id="theme-button"></i></div> {% endcomment %}
+
+>>>>>>> Stashed changes
                 </div>
             </div>
         </div>
     </header>
+<<<<<<< Updated upstream
     <main>
         <section class="hero-section" id="home">
             <div class="container">
@@ -116,6 +152,29 @@
                                 {% endif %}
                             </div>
                             {% endfor %}
+=======
+    <section class=" descript "  id="home">
+        <div class="container ">
+
+            <div class="small-container ">
+                <div class="row">
+                    <div class="col-md-6 initial-0 aos-init " data-aos="zoom-in" data-aos-delay="200">
+                        <p id="hey">HEY THERE !</p>
+                        {% for infor in info %}
+                        <h1 id="name">I am <span>{{infor.name_complete}}</span> </h1>
+                        <img src="{% static 'images/me.png' %}" alt="me">
+                        <h3> Software Developer</h3>
+                        <p> <span id="big"></span>{{infor.mini_about}}</p>
+
+                        <div class="social">
+                            <a href="{{infor.instagram}}"> <i class="fa fa-instagram"></i></a>
+                            <a href="{{infor.facebook}}"><i class="fa fa-facebook-f" style="background: #4974c5 "></i>
+                           </a>
+                            <a href="{{infor.github}}"><i class="fa fa-github" style="background: #4974c5 "></i>
+                            </a>
+                            <a href="{{infor.linkedin}}"><i class="fa fa-linkedin" style="background: #4974c5 "></i>
+                            </a>
+>>>>>>> Stashed changes
                         </div>
                         <div class="col-lg-6 col-md-6 hero-image aos-init" data-aos="fade-left" data-aos-delay="300">
                             <div class="image-wrapper">
@@ -140,6 +199,7 @@
                             </div>
                             {% endif %}
                         </div>
+<<<<<<< Updated upstream
                         <div class="col-lg-6 col-md-6 about-content aos-init" data-aos="fade-left" data-aos-delay="400">
                             <div class="section-title">
                                 <h2>{{aboutme.title}}</h2>
@@ -151,6 +211,12 @@
                             <div class="about-icon aos-init" data-aos="zoom-in" data-aos-delay="600">
                                 <img src="{% static 'images/programmer.png' %}" alt="Programmer" loading="lazy">
                             </div>
+=======
+                        <p data-aos="zoom-in" data-aos-delay="200" class="aos-init">{{aboutme.description1}}</p>
+                        <p data-aos="zoom-in" data-aos-delay="200" class="aos-init">{{aboutme.description2}}</p>
+                        <div class="icons aos-init" data-aos="zoom-in" data-aos-delay="1200">
+                            <img src="{% static 'images/programmer.png' %} " alt="programmer">
+>>>>>>> Stashed changes
                         </div>
                         {% endfor %}
                     </div>
@@ -175,6 +241,7 @@
                                     <div class="skill-progress" data-width="50" style="width: 50%"></div>
                                 </div>
                             </div>
+<<<<<<< Updated upstream
                             <div class="skill-item aos-init" data-aos="fade-up" data-aos-delay="150">
                                 <div class="skill-header">
                                     <span class="skill-name">Backend</span>
@@ -245,7 +312,83 @@
                                 </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="70" style="width: 70%"></div>
+=======
+
+                            <div class="all-bars">
+                                 <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="bar-info">
+                                        <p>python</p>
+                                        <h5>90%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="Python"></p>
+                                    </div>
                                 </div>
+                                 <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="600">
+                                    <div class="bar-info">
+                                        <p>Django</p>
+                                        <h5>90%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="Django"></p>
+                                    </div>
+                                </div>
+                                <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="bar-info">
+                                        <p>C#</p>
+                                        <h5>80%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="Csharp"></p>
+                                    </div>
+                                </div>
+                                <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="300">
+                                    <div class="bar-info">
+                                        <p>Javascript</p>
+                                        <h5>70%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="Javascript"></p>
+                                    </div>
+                                </div>
+                                <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="700">
+                                    <div class="bar-info">
+                                        <p>sql-database</p>
+                                        <h5>70%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="database"></p>
+                                    </div>
+                                </div>
+                                  <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="500">
+                                    <div class="bar-info">
+                                        <p>Php</p>
+                                        <h5>60%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="Php"></p>
+                                    </div>
+                                </div>
+                                <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="500">
+                                    <div class="bar-info">
+                                        <p>Laravel</p>
+                                        <h5>60%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="Laravel"></p>
+                                    </div>
+                                </div>
+                               <div class="bars aos-init" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="bar-info">
+                                        <p>Flutter</p>
+                                        <h5>60%</h5>
+                                    </div>
+                                    <div class="bar">
+                                        <p id="Flutter"></p>
+                                    </div>
+>>>>>>> Stashed changes
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -261,6 +404,7 @@
                 <h2>MY WORK</h2>
             </div>
             <div class="small-container">
+<<<<<<< Updated upstream
                 <div class="projects-grid">
                     {% for sys in skills %}
                     <div class="project-card aos-init" data-aos="zoom-in" data-aos-delay="200">
@@ -283,10 +427,31 @@
                         <div class="project-content">
                             <h3>{{sys.title}}</h3>
                             <p>{{sys.skill}}</p>
+=======
+                 {% for sys in skills %}
+                <div class="row3">
+
+                    <div class="card initial-6  w- aos-init" data-aos="zoom-in" data-aos-delay="500">
+
+                        <img src="images/{{sys.image}}" alt="">
+                        <div class="card-body col-5-info px-3 py-3">
+                            <h3 class="pb-1">{{sys.title}}</h3>
+                            <p class="pb-1">{{sys.skill}}</p>
+
+                            <a class="main-button ml-2" href="{{sys.link}}" target="_blank" rel="noopener noreferrer"> <button id="btn2">VISIT</i></a>
+>>>>>>> Stashed changes
                         </div>
                     </div>
+<<<<<<< Updated upstream
                     {% endfor %}
                 </div>
+=======
+
+
+                </div>
+                 {% endfor %}
+
+>>>>>>> Stashed changes
             </div>
         </div>
     </section>
@@ -299,6 +464,7 @@
                 <h2>CONTACT ME</h2>
             </div>
             <div class="small-container">
+<<<<<<< Updated upstream
                 <div class="row align-items-center">
                     {% for infor in info %}
                     <div class="col-lg-6 col-md-6 contact-info-wrapper aos-init" data-aos="fade-right" data-aos-delay="300">
@@ -315,6 +481,16 @@
                                     <p>Email</p>
                                     <a href="mailto:{{infor.email}}">{{infor.email}}</a>
                                 </div>
+=======
+                <div class="row4">
+                                         {% for infor in info %}
+
+                    <div class="col-md-6 initial-8 aos-init" data-aos="fade-down-right" data-aos-delay="300">
+                        <p id="helo">Contact Me At <img src="{%  static 'images/e.png' %}" alt="" id="e" class="wave"></p>
+
+                        <div class="contact-info">
+                            <div class="c-ico">
+>>>>>>> Stashed changes
                             </div>
                             
                             {% if infor.phone %}
@@ -371,6 +547,18 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< Updated upstream
+=======
+                            <h4>
+                                <a href="{{infor.instagram}}"><i class="fa fa-instagram"></i></a>
+                                <a href="{{infor.github}}"><i class="fa fa-github"></i>
+                                </a>
+                                <a href="{{infor.facebook}}"><i class="fa fa-facebook" style="background: #4974c5"></i></a>
+                                <a href="{{infor.linkedin}}"><i class="fa fa-linkedin" style="background: #4974c5 "></i>
+                            </a>
+                            </h4>
+
+>>>>>>> Stashed changes
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 contact-image aos-init" data-aos="fade-left" data-aos-delay="400">

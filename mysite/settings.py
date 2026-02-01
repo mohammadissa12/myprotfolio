@@ -15,7 +15,6 @@ from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,7 +30,7 @@ SECRET_KEY = 'django-insecure-*+l37$8xq%@g&zl=vb!411-vpjbgbgaa$!9=p6t%gj+g5m4(kt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','mohammadissa.pythonanywhere.com']
 
 
 # Application definition
@@ -123,7 +122,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = '/static/'
 
 

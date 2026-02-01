@@ -294,16 +294,13 @@ body.dark-theme .navbur.scrolled {
 }
 
 /* Show fallback if ion-icon is not loaded */
-.theme-toggle:not(:has(ion-icon)),
-.theme-toggle-mobile:not(:has(ion-icon)) {
-    .theme-icon-fallback {
-        display: block !important;
-    }
+.theme-toggle:not(:has(ion-icon)) .theme-icon-fallback,
+.theme-toggle-mobile:not(:has(ion-icon)) .theme-icon-fallback {
+    display: block !important;
 }
 
 /* Mobile Navigation Toggle */
 .mobile-nav-toggle {
-<<<<<<< Updated upstream
     display: none;
     flex-direction: column;
     gap: 5px;
@@ -324,23 +321,6 @@ body.dark-theme .navbur.scrolled {
     background: var(--text-primary);
     border-radius: var(--radius-sm);
     transition: var(--transition-base);
-=======
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  z-index: 9998;
-  border: 0;
-  background: 0 0;
-  font-size: 24px;
-  transition: all 0.4s;
-  outline: 0 !important;
-  line-height: 1;
-  cursor: pointer;
-  text-align: right;
-}
-.mobile-nav-toggle i {
-  color: rgb(255, 255, 255);
->>>>>>> Stashed changes
 }
 
 .mobile-nav-toggle.active .hamburger-line:nth-child(1) {
@@ -357,7 +337,6 @@ body.dark-theme .navbur.scrolled {
 
 /* Mobile Navigation */
 .mobile-nav {
-<<<<<<< Updated upstream
     position: fixed;
     top: 70px;
     right: -100%;
@@ -373,26 +352,6 @@ body.dark-theme .navbur.scrolled {
 
 .mobile-nav.active {
     right: 0;
-=======
-  position: fixed;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  z-index: 9999;
-  overflow-y: auto;
-  background: rgb(255, 253, 253);
-  transition: ease-in-out 0.2s;
-  opacity: 0;
-  visibility: hidden;
-  border-radius: 10px;
-  padding: 10px 0;
-}
-.mobile-nav * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
->>>>>>> Stashed changes
 }
 
 .mobile-nav ul {
@@ -404,45 +363,11 @@ body.dark-theme .navbur.scrolled {
 }
 
 .mobile-nav a {
-<<<<<<< Updated upstream
     display: block;
     padding: var(--spacing-sm);
     color: var(--text-primary);
     border-radius: var(--radius-md);
     transition: var(--transition-base);
-=======
-  display: block;
-  position: relative;
-  color: #434072;
-  padding: 10px 20px;
-  font-weight: 500;
-  outline: 0;
-}
-.nav-menu .active > a,
-.nav-menu li:hover > a {
-  color: #f4f2f8 !important;
-  text-decoration: none;
-}
-.mobile-nav .drop-down > a:after {
-  content: "\ea99";
-  font-family: IcoFont;
-  padding-left: 10px;
-  position: absolute;
-  right: 15px;
-}
-.mobile-nav .active.drop-down > a:after {
-  content: "\eaa1";
-}
-.mobile-nav .drop-down > a {
-  padding-right: 35px;
-}
-.mobile-nav .drop-down ul {
-  display: none;
-  overflow: hidden;
-}
-.mobile-nav .drop-down li {
-  padding-left: 20px;
->>>>>>> Stashed changes
 }
 
 .mobile-nav a:hover,

@@ -39,12 +39,10 @@
                 // Switch to dark theme (remove light theme class)
                 document.body.classList.remove(darkTheme);
                 localStorage.setItem('selected-theme', 'dark');
-                console.log('Switched to dark theme');
             } else {
                 // Switch to light theme (add light theme class)
                 document.body.classList.add(darkTheme);
                 localStorage.setItem('selected-theme', 'light');
-                console.log('Switched to light theme');
             }
         };
 

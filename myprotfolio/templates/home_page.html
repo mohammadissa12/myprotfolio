@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,10 +76,10 @@
                             {% for infor in info %}
                             <p class="greeting" id="hey">HEY THERE !</p>
                             <h1 class="hero-title" id="name">
-                                I am <span class="highlight">{{infor.name_complete}}</span>
+                                I am <span class="highlight">{{infor.name_complete|default:"Developer"}}</span>
                             </h1>
                             <h2 class="hero-subtitle">Backend Developer</h2>
-                            <p class="hero-description">{{infor.mini_about}}</p>
+                            <p class="hero-description">{{infor.mini_about|default:"Passionate backend developer creating robust and scalable solutions."}}</p>
 
                             <div class="social-links">
                                 {% if infor.github %}
@@ -106,14 +105,20 @@
                             </div>
                             
                             <div class="hero-buttons">
+                                {% if infor.email %}
                                 <a href="mailto:{{infor.email}}" class="btn btn-primary">
                                     Contact me <i class="uil uil-message"></i>
                                 </a>
+                                {% endif %}
                                 {% if infor.mycv %}
                                 <a href="{{infor.mycv}}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                                     My Resume <i class="uil uil-import"></i>
                                 </a>
                                 {% endif %}
+                            </div>
+                            {% empty %}
+                            <div class="col-12">
+                                <p class="text-muted">Please add your personal information in the admin panel.</p>
                             </div>
                             {% endfor %}
                         </div>
@@ -141,15 +146,23 @@
                         </div>
                         <div class="col-lg-6 col-md-6 about-content aos-init" data-aos="fade-left" data-aos-delay="400">
                             <div class="section-title">
-                                <h2>{{aboutme.title}}</h2>
+                                <h2>{{aboutme.title|default:"About Me"}}</h2>
                             </div>
                             <div class="about-text">
+                                {% if aboutme.description1 %}
                                 <p>{{aboutme.description1}}</p>
+                                {% endif %}
+                                {% if aboutme.description2 %}
                                 <p>{{aboutme.description2}}</p>
+                                {% endif %}
                             </div>
                             <div class="about-icon aos-init" data-aos="zoom-in" data-aos-delay="600">
                                 <img src="{% static 'images/programmer.png' %}" alt="Programmer" loading="lazy">
                             </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-12 text-center">
+                            <p class="text-muted">About information coming soon.</p>
                         </div>
                         {% endfor %}
                     </div>
@@ -258,28 +271,32 @@
             </div>
             <div class="small-container">
                 <div class="projects-grid">
-                    {% for sys in skills %}
+                        {% for project in skills %}
                     <div class="project-card aos-init" data-aos="zoom-in" data-aos-delay="200">
                         <div class="project-image">
-                            {% if sys.image %}
-                            <img src="{{sys.image.url}}" alt="{{sys.title}}" loading="lazy">
+                            {% if project.image %}
+                            <img src="{{project.image.url}}" alt="{{project.title|default:'Project'}}" loading="lazy">
                             {% else %}
                             <div class="project-placeholder">
                                 <i class="fas fa-image"></i>
                             </div>
                             {% endif %}
                             <div class="project-overlay">
-                                {% if sys.link %}
-                                <a href="{{sys.link}}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                {% if project.link %}
+                                <a href="{{project.link}}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                                     Visit Project <i class="uil uil-external-link-alt"></i>
                                 </a>
                                 {% endif %}
                             </div>
                         </div>
                         <div class="project-content">
-                            <h3>{{sys.title}}</h3>
-                            <p>{{sys.skill}}</p>
+                            <h3>{{project.title|default:"Untitled Project"}}</h3>
+                            <p>{{project.skill|default:project.description|default:"No description available"}}</p>
                         </div>
+                    </div>
+                    {% empty %}
+                    <div class="col-12 text-center">
+                        <p class="text-muted">No projects available yet.</p>
                     </div>
                     {% endfor %}
                 </div>
@@ -297,7 +314,7 @@
                     {% for infor in info %}
                     <div class="col-lg-6 col-md-6 contact-info-wrapper aos-init" data-aos="fade-right" data-aos-delay="300">
                         <p class="contact-greeting">
-                            Contact Me At <img src="{% static 'images/e.png' %}" alt="" class="wave-emoji">
+                            Contact Me At <img src="{% static 'images/e.png' %}" alt="Wave emoji" class="wave-emoji">
                         </p>
 
                         <div class="contact-details">

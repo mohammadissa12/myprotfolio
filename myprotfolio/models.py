@@ -17,24 +17,37 @@ class PersonalInformation(models.Model):
     instagram = models.URLField(blank=True, null=True)
     mycv = models.URLField(blank=True, null=True)
 
+    class Meta:
+        verbose_name = "Personal Information"
+        verbose_name_plural = "Personal Information"
+
     def __str__(self):
-        return self.name_complete
+        return self.name_complete or "Personal Information"
+
+
 class About(models.Model):
     title = models.CharField(max_length=20, blank=True, null=True)
     description1 = models.TextField(blank=False, null=True)
     description2 = models.TextField(blank=False, null=True)
+    about_avatar = models.URLField(blank=True, null=True, help_text="URL to about section image")
+    
     def __str__(self):
-        return self.title
+        return self.title or "About"
 
 class Projects(models.Model):
     title = models.CharField(max_length=50, blank=True, null=True)
-    description = models.TextField(blank=False, null=True)
-    skill = models.TextField(max_length=230, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    skill = models.TextField(max_length=230, blank=True, null=True, help_text="Skills/technologies used")
     link = models.URLField(blank=True, null=True)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='projects/', blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Project"
+        verbose_name_plural = "Projects"
+        ordering = ['-id']
 
     def __str__(self):
-        return self.title
+        return self.title or "Untitled Project"
 
 class Contact(models.Model):
     title = models.CharField(max_length=50, blank=True, null=True)
@@ -56,8 +69,12 @@ class Contact(models.Model):
 
 class Skills(models.Model):
     skill = models.CharField(max_length=50, blank=True, null=True)
-    num = models.IntegerField(blank=True, null=True)
+    num = models.IntegerField(blank=True, null=True, help_text="Skill percentage (0-100)")
 
-  
+    class Meta:
+        verbose_name = "Skill"
+        verbose_name_plural = "Skills"
+        ordering = ['-num']
+
     def __str__(self):
-        return self.skill
+        return self.skill or "Unnamed Skill"

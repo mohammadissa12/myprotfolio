@@ -795,6 +795,10 @@ body.dark-theme .hero-section {
     background: var(--bg-primary);
 }
 
+.contact-info-wrapper {
+    padding: var(--spacing-lg) 0;
+}
+
 .contact-greeting {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
@@ -1036,6 +1040,11 @@ body.dark-theme .hero-section {
     text-align: center;
 }
 
+.text-muted {
+    color: var(--text-muted);
+    font-size: var(--font-size-base);
+}
+
 .mt-1 { margin-top: var(--spacing-xs); }
 .mt-2 { margin-top: var(--spacing-sm); }
 .mt-3 { margin-top: var(--spacing-md); }
@@ -1045,6 +1054,12 @@ body.dark-theme .hero-section {
 .mb-2 { margin-bottom: var(--spacing-sm); }
 .mb-3 { margin-bottom: var(--spacing-md); }
 .mb-4 { margin-bottom: var(--spacing-lg); }
+
+/* Empty state styling */
+.col-12.text-center p.text-muted {
+    padding: var(--spacing-xl);
+    font-style: italic;
+}
 
 /* ===== ACCESSIBILITY ===== */
 @media (prefers-reduced-motion: reduce) {
